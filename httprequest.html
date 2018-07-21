@@ -33,10 +33,22 @@
             let blockquoteNode = document.createElement('blockquote');
             // Crear el text node con el texto el quote
             let textNode = document.createTextNode(quote.quote);
+            // Crear el cite note
+            let citeNode = document.createElement('cite');
+            // Crear el node del autor del quote
+            let authorNode = document.createTextNode(quote.character);
+            // Agregar el autor al nodo cite
+            citeNode.appendChild(authorNode);
+            // Crear el nodo de la imagen
+            let imgNode = document.createElement('img');
+            // Agregar la url de la imagen
+            imgNode.setAttribute('src', quote.image);
             // Agregar el texto al blockquote
             blockquoteNode.appendChild(textNode);
-            // Agregamos el blockquote al body de la pagina
+            // Agregamos los nodos al body de la pagina
             document.body.appendChild(blockquoteNode);
+            document.body.appendChild(citeNode);
+            document.body.appendChild(imgNode);
         }
 
 
