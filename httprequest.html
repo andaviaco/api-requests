@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Request con XmlHttpRequest</title>
+    </head>
+    <body>
+        <h1>Request con XmlHttpRequest</h1>
+        <p>En este ejemplo hacemos una petición al API</p>
+
+        <script type="text/javascript">
+
+        function getQuotes(){
+            // 1. Crear el objecto httprequest
+            let xhr = new XMLHttpRequest();
+
+            // 2. Abrimos la conexion
+            xhr.open('GET', 'https://thesimpsonsquoteapi.glitch.me/quotes');
+
+            // 3. Proceso para cada status
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4){
+                    renderAllQuotes(JSON.parse(xhr.responseText));
+                }
+            };
+
+            // 4. Ejecutar la petición
+            xhr.send();
+        }
+
+        function renderQuote(quote) {
+            // Crear un blockquote node
+            let blockquoteNode = document.createElement('blockquote');
+            // Crear el text node con el texto el quote
+            let textNode = document.createTextNode(quote.quote);
+            // Agregar el texto al blockquote
+            blockquoteNode.appendChild(textNode);
+            // Agregamos el blockquote al body de la pagina
+            document.body.appendChild(blockquoteNode);
+        }
+
+
+        function renderAllQuotes(quotes){
+            quotes.forEach(function(quote) {
+                renderQuote(quote);
+            });
+        }
+
+        getQuotes();
+        </script>
+    </body>
+</html>
