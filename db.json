@@ -1,0 +1,126 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Michelle",
+      "email": "michelle@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Paco",
+      "email": "paco@mail.com",
+      "password": "132456"
+    },
+    {
+      "id": 3,
+      "name": "Jorge",
+      "email": "jorge@mail.com",
+      "password": "213456"
+    },
+    {
+      "id": 4,
+      "name": "Cristian",
+      "email": "cristian@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "name": "Andrea",
+      "email": "andrea@mail.com",
+      "password": "123465"
+    },
+    {
+      "id": 6,
+      "name": "Ramon",
+      "email": "ramon@mail.com",
+      "password": "124765"
+    },
+    {
+      "name": "",
+      "mail": "ff",
+      "password": "",
+      "id": 7
+    }
+  ],
+  "products": [
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    },
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    },
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    },
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    },
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    },
+    {
+      "sku": "947743084509",
+      "name": "Garden Journal: Three Year Daily Planner Gardening Gift for Gardeners, Garden Book Garden Art Gift for Mom Gift Day Planner Gardener Gift",
+      "brand": "TheFarWoods",
+      "rating": 5,
+      "reviews": 960,
+      "category": "",
+      "price": "395.26",
+      "quantity": "",
+      "description": "",
+      "photo": "image5.jpg",
+      "popular": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Products</title>
+        <style media="screen">
+            .products {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+            }
+            .products article {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                text-align: center;
+            }
+            .products article img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="products popular" id="popular-products">
+
+        </section>
+        <script src="js/fetch.js" charset="utf-8"></script>
+    </body>
+</html>
