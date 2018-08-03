@@ -1,13 +1,13 @@
 async function getPopularProducts(){
     // Enviar la informacion al API
-    const myRequest = new Request(
-        'http://localhost:3000/products',
+    const reqProducts = new Request(
+        'http://localhost:3000/products', // Cambiar por tu propia API
         {
             method: 'GET'
         }
     );
 
-    let response = await fetch(myRequest)
+    let response = await fetch(reqProducts)
     .then((response) => {
         if (response.status === 200) {
             return response.json();
@@ -17,20 +17,17 @@ async function getPopularProducts(){
     })
     .then((response) => {
         return response;
-    }).catch(error => {
+    }).catch((error) => {
         console.error(error);
     });
 
     return response;
 }
 
-async function renderProducts(){
-    let products = await getPopularProducts();
-    console.log(products);
+function renderProducts(products) {
+    let popularProductsNode = document.getElementById('popular-products');
 
     products.forEach((product) => {
-        console.log(product);
-        let popularProductsNode = document.getElementById('popular-products');
         let articleNode = document.createElement('article');
         let contentNode = document.createElement('div');
 
@@ -45,11 +42,22 @@ async function renderProducts(){
         titleNode.appendChild(textNode);
 
         // Marca
-        let brandNode = document.createElement('p');
+        let brandNode = document.createElement('h3');
         let brandTextNode = document.createTextNode(product.brand);
         brandNode.appendChild(brandTextNode);
 
+        // Descripcion
+        let descriptionNode = document.createElement('p');
+        descriptionNode.classList.add('caca');
+        let descriptionTextNode = document.createTextNode(product.description);
+        descriptionNode.appendChild(descriptionTextNode);
+
+        // Reviews
+
+
         contentNode.appendChild(titleNode);
+        contentNode.appendChild(brandNode);
+        contentNode.appendChild(descriptionNode);
         articleNode.appendChild(imageNode);
         articleNode.appendChild(contentNode);
 
@@ -59,4 +67,5 @@ async function renderProducts(){
 
 
 
-renderProducts();
+let a = getPopularProducts();
+console.log(a);
