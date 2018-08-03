@@ -24,48 +24,25 @@ async function getPopularProducts(){
     return response;
 }
 
-function renderProducts(products) {
+async function renderProducts() {
+    let products = await getPopularProducts();
+
     let popularProductsNode = document.getElementById('popular-products');
+    let articleNode = document.querySelector('#popular-products article');
+    articleNode.remove();
 
     products.forEach((product) => {
-        let articleNode = document.createElement('article');
-        let contentNode = document.createElement('div');
+        let newArticle = articleNode.cloneNode(true);
+        newArticle.children[0].src = 'img/' + product.photo;
+        newArticle.children[1].children[0].innerText = product.name;
+        newArticle.children[1].children[1].innerText = product.brand;
+        newArticle.children[1].children[2].innerText = product.description;
+        newArticle.children[1].children[4].innerText = product.price;
 
-        // Foto
-        let imageNode = document.createElement('img');
-        imageNode.src = 'img/' + product.photo;
-        imageNode.alt = product.name;
-
-        // Nombre
-        let titleNode = document.createElement('h2');
-        let textNode = document.createTextNode(product.name);
-        titleNode.appendChild(textNode);
-
-        // Marca
-        let brandNode = document.createElement('h3');
-        let brandTextNode = document.createTextNode(product.brand);
-        brandNode.appendChild(brandTextNode);
-
-        // Descripcion
-        let descriptionNode = document.createElement('p');
-        descriptionNode.classList.add('caca');
-        let descriptionTextNode = document.createTextNode(product.description);
-        descriptionNode.appendChild(descriptionTextNode);
-
-        // Reviews
-
-
-        contentNode.appendChild(titleNode);
-        contentNode.appendChild(brandNode);
-        contentNode.appendChild(descriptionNode);
-        articleNode.appendChild(imageNode);
-        articleNode.appendChild(contentNode);
-
-        popularProductsNode.appendChild(articleNode);
+        popularProductsNode.appendChild(newArticle);
     });
 }
 
 
 
-let a = getPopularProducts();
-console.log(a);
+renderProducts();
